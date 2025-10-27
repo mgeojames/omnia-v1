@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Omnia — Women’s Health Platform</title>
+  <meta name="description" content="Omnia helps women navigate menopause with AI-powered insights, symptom tracking, and expert-backed education — all in one place.">
+  <!-- Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Poppins', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            brand: {
+              DEFAULT: '#E0FC60', // lime highlight
+              fg: '#0B0B0C'       // primary text
+            },
+            ink: {
+              900: '#0B0B0C',
+              800: '#141417',
+              700: '#1C1C20',
+              600: '#2A2A31',
+              500: '#35353D',
+              400: '#5D5D6B',
+              300: '#8B8B98',
+              200: '#C5C5CF',
+              100: '#EDEDF2'
+            }
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(0,0,0,.07)',
+            card: '0 8px 24px rgba(0,0,0,.06)',
+            ring: '0 0 0 8px rgba(224,252,96,.25)'
+          },
+          borderRadius: {
+            xl2: '1.25rem'
+          },
+          maxWidth: {
+            screen: '1320px'
+          }
+        }
+      },
+      darkMode: 'class'
+    }
+  </script>
+  <style>
+    /* Gentle grain-like background on hero */
+    .grain {
+      position: relative;
+      overflow: hidden;
+    }
+    .grain::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(0,0,0,.04) 1px, transparent 1px);
+      background-size: 3px 3px;
+      opacity: .35;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="antialiased text-ink-800 bg-white selection:bg-brand selection:text-ink-900">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/70 border-b border-ink-100">
+    <div class="mx-auto max-w-screen px-6 h-16 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-2 font-semibold tracking-wider uppercase text-ink-900">
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-brand"></span> Omnia
+      </a>
+      <nav class="hidden md:flex items-center gap-7 text-sm">
+        <a class="hover:opacity-80" href="#how">How it works</a>
+        <a class="hover:opacity-80" href="#features">Features</a>
+        <a class="hover:opacity-80" href="#pricing">Pricing</a>
+        <a class="hover:opacity-80" href="#privacy">Privacy</a>
+        <a class="inline-flex items-center gap-2 bg-ink-900 text-white px-4 py-2 rounded-full hover:shadow-soft transition" href="#join">
+          Join Waitlist
+        </a>
+      </nav>
+      <button id="mobileBtn" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-ink-100">
+        <span class="sr-only">Open menu</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobileNav" class="md:hidden hidden border-t border-ink-100">
+      <nav class="px-6 py-4 flex flex-col gap-3 text-sm">
+        <a class="py-2" href="#how">How it works</a>
+        <a class="py-2" href="#features">Features</a>
+        <a class="py-2" href="#pricing">Pricing</a>
+        <a class="py-2" href="#privacy">Privacy</a>
+        <a class="mt-2 inline-flex items-center justify-center bg-ink-900 text-white px-4 py-2 rounded-full" href="#join">Join Waitlist</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" class="grain relative">
+    <div class="absolute inset-0 bg-gradient-to-b from-ink-100/60 via-white to-white"></div>
+    <div class="relative mx-auto max-w-screen px-6 pt-24 pb-16">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-ink-100 bg-white text-xs text-ink-500">
+            Women’s Health • Menopause
+          </span>
+          <h1 class="mt-6 text-4xl/tight md:text-5xl/tight font-semibold tracking-[-0.02em] text-ink-900">
+            Take control of your <span class="bg-brand/50 rounded-xl px-2">menopause</span> journey.
+          </h1>
+          <p class="mt-5 text-ink-600 text-base md:text-lg max-w-xl">
+            AI-powered insights, symptom tracking, and expert-backed education — all in one clean, modern app.
+          </p>
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <a href="#join" class="inline-flex items-center justify-center h-11 px-6 rounded-full bg-ink-900 text-white hover:shadow-soft transition">
+              Join the Waitlist
+            </a>
+            <a href="#how" class="inline-flex items-center justify-center h-11 px-5 rounded-full border border-ink-200 hover:border-ink-300 transition">
+              See How It Works
+            </a>
+          </div>
+
+          <div class="mt-10 grid grid-cols-3 gap-3 max-w-lg">
+            <div class="rounded-2xl border border-ink-100 p-4">
+              <div class="text-2xl font-semibold">900M</div>
+              <div class="text-sm text-ink-500">Women lack personalized care</div>
+            </div>
+            <div class="rounded-2xl border border-ink-100 p-4">
+              <div class="text-2xl font-semibold">80%</div>
+              <div class="text-sm text-ink-500">Say it impacts daily life</div>
+            </div>
+            <div class="rounded-2xl border border-ink-100 p-4">
+              <div class="text-2xl font-semibold">1/3</div>
+              <div class="text-sm text-ink-500">Experience depression</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="aspect-[10/7] rounded-2xl border border-ink-100 bg-gradient-to-br from-white to-ink-100/50 shadow-card flex items-center justify-center">
+            <div class="text-ink-400 text-sm md:text-base tracking-wide">App Preview / Dashboard (placeholder)</div>
+          </div>
+          <div class="absolute -bottom-6 -left-6 hidden md:block bg-white rounded-2xl border border-ink-100 shadow-card px-4 py-3">
+            <div class="text-xs text-ink-500">Privacy-first • GDPR-ready</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section class="mx-auto max-w-screen px-6 py-20">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="inline-flex px-3 py-1 rounded-full border border-ink-100 text-xs text-ink-500">The Gap Today</span>
+        <h2 class="mt-4 text-3xl md:text-4xl font-semibold text-ink-900">Menopause care is fragmented and impersonal</h2>
+        <p class="mt-4 text-ink-600 max-w-prose">
+          Healthcare often labels menopause as “normal aging,” leaving women without guidance, empathy, or tools to make confident decisions.
+        </p>
+        <ul class="mt-6 space-y-3">
+          <li class="flex gap-3"><span class="mt-1 inline-block w-5 h-5 rounded-full bg-brand"></span> <span>Fragmented information across apps and articles</span></li>
+          <li class="flex gap-3"><span class="mt-1 inline-block w-5 h-5 rounded-full bg-brand"></span> <span>Limited access to specialists and supportive care</span></li>
+          <li class="flex gap-3"><span class="mt-1 inline-block w-5 h-5 rounded-full bg-brand"></span> <span>One-size-fits-all advice that ignores unique journeys</span></li>
+        </ul>
+      </div>
+      <div class="aspect-[10/7] rounded-2xl border border-ink-100 bg-white shadow-card grid place-items-center">
+        <span class="text-ink-400">Fragmented Care Illustration</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features / Pillars -->
+  <section id="features" class="bg-gradient-to-b from-white to-ink-100/40">
+    <div class="mx-auto max-w-screen px-6 py-20">
+      <div class="text-center max-w-2xl mx-auto">
+        <span class="inline-flex px-3 py-1 rounded-full border border-ink-100 text-xs text-ink-500">The Omnia Solution</span>
+        <h2 class="mt-4 text-3xl md:text-4xl font-semibold text-ink-900">Personalized. Holistic. Backed by Experts.</h2>
+        <p class="mt-3 text-ink-600">Tracking, education, and care in one platform — tailored to your symptoms, lifestyle, and goals.</p>
+      </div>
+
+      <div class="mt-12 grid md:grid-cols-2 gap-8">
+        <!-- Card -->
+        <div class="rounded-2xl border border-ink-100 bg-white p-8 shadow-card">
+          <div class="text-sm font-medium text-ink-500">01</div>
+          <h3 class="mt-2 text-xl font-semibold">Personalized Guidance</h3>
+          <p class="mt-2 text-ink-600">AI-driven recommendations adapt to your unique hormonal transition — using symptom patterns, medical history, and preferences.</p>
+          <ul class="mt-4 space-y-2 text-ink-700 text-sm">
+            <li class="flex gap-2"><span class="text-brand fg">✓</span> Daily insights & nudges</li>
+            <li class="flex gap-2"><span class="text-brand fg">✓</span> Custom non-hormonal & hormonal options</li>
+            <li class="flex gap-2"><span class="text-brand fg">✓</span> Clear, simple explanations</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-ink-100 bg-white p-8 shadow-card">
+          <div class="text-sm font-medium text-ink-500">02</div>
+          <h3 class="mt-2 text-xl font-semibold">Expert-Backed Education</h3>
+          <p class="mt-2 text-ink-600">Evidence-based content curated with clinicians — so you can understand what’s happening and choose what works for you.</p>
+          <ul class="mt-4 space-y-2 text-ink-700 text-sm">
+            <li class="flex gap-2"><span class="text-brand fg">✓</span> Plain-language learning paths</li>
+            <li class="flex gap-2"><span class="text-brand fg">✓</span> Programs for sleep, mood, hot flashes, and more</li>
+            <li class="flex gap-2"><span class="text-brand fg">✓</span> Weekly Q&A with specialists (coming soon)</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-ink-100 bg-white p-8 shadow-card">
+          <div class="text-sm font-medium text-ink-500">03</div>
+          <h3 class="mt-2 text-xl font-semibold">Community & Care</h3>
+          <p class="mt-2 text-ink-600">You’re not alone. Join a supportive community and connect with vetted experts for every stage of menopause.</p>
+          <ul class="mt-4 space-y-2 text-ink-700 text-sm">
+            <li class="flex gap-2"><span class="text-brand fg">✓</span> Peer support & moderated groups</li>
+            <li class="flex gap-2"><span class="text-brand fg">✓</span> Guided programs and check-ins</li>
+            <li class="flex gap-2"><span class="text-brand fg">✓</span> Private consults (Omnia Plus)</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-ink-100 bg-white p-8 shadow-card">
+          <div class="text-sm font-medium text-ink-500">04</div>
+          <h3 class="mt-2 text-xl font-semibold">Holistic Integration</h3>
+          <p class="mt-2 text-ink-600">Combine tracking, programs, and lifestyle advice — with privacy-first design and clinician collaboration.</p>
+          <ul class="mt-4 space-y-2 text-ink-700 text-sm">
+            <li class="flex gap-2"><span class="text-brand fg">✓</span> Wearables (roadmap)</li>
+            <li class="flex gap-2"><span class="text-brand fg">✓</span> Clinician dashboards (B2B)</li>
+            <li class="flex gap-2"><span class="text-brand fg">✓</span> Research-ready insights (consented)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it Works -->
+  <section id="how" class="mx-auto max-w-screen px-6 py-20">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="aspect-[10/7] rounded-2xl border border-ink-100 bg-white shadow-card grid place-items-center">
+        <span class="text-ink-400">Track → Discover → Thrive</span>
+      </div>
+      <div>
+        <span class="inline-flex px-3 py-1 rounded-full border border-ink-100 text-xs text-ink-500">How it works</span>
+        <h2 class="mt-4 text-3xl md:text-4xl font-semibold text-ink-900">From tracking to thriving</h2>
+        <ol class="mt-4 space-y-3 text-ink-700">
+          <li><span class="font-semibold">Tell us how you feel.</span> Log symptoms, sleep, mood, and habits.</li>
+          <li><span class="font-semibold">Get your plan.</span> Personalized insights and recommendations.</li>
+          <li><span class="font-semibold">Feel better.</span> Track progress with supportive nudges and programs.</li>
+        </ol>
+        <div class="mt-6 inline-flex items-center gap-2 text-sm text-ink-500">
+          <span class="inline-block w-2.5 h-2.5 rounded-full bg-brand"></span> iOS-style clarity • Privacy-first • GDPR-ready
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Personas -->
+  <section class="bg-gradient-to-b from-ink-100/40 to-white">
+    <div class="mx-auto max-w-screen px-6 py-20">
+      <div class="text-center max-w-2xl mx-auto">
+        <span class="inline-flex px-3 py-1 rounded-full border border-ink-100 text-xs text-ink-500">Designed for every stage</span>
+        <h2 class="mt-4 text-3xl md:text-4xl font-semibold text-ink-900">Early symptoms to post-menopause</h2>
+      </div>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-ink-100 bg-white p-6 shadow-card">
+          <div class="text-sm text-ink-500">Lindsay, 35</div>
+          <div class="mt-1 font-semibold text-ink-900">Early signs & high stress</div>
+          <p class="mt-2 text-sm text-ink-700">Prefers holistic, non-hormonal support with clear daily guidance.</p>
+        </div>
+        <div class="rounded-2xl border border-ink-100 bg-white p-6 shadow-card">
+          <div class="text-sm text-ink-500">Lucy, 47</div>
+          <div class="mt-1 font-semibold text-ink-900">Work & relationship impact</div>
+          <p class="mt-2 text-sm text-ink-700">Seeks structure, symptom relief, and emotional support.</p>
+        </div>
+        <div class="rounded-2xl border border-ink-100 bg-white p-6 shadow-card">
+          <div class="text-sm text-ink-500">Sarah, 51</div>
+          <div class="mt-1 font-semibold text-ink-900">Severe symptoms & care friction</div>
+          <p class="mt-2 text-sm text-ink-700">Needs clinical clarity, advocacy, and tailored treatment options.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacy & Trust -->
+  <section id="privacy" class="mx-auto max-w-screen px-6 py-20">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="inline-flex px-3 py-1 rounded-full border border-ink-100 text-xs text-ink-500">Trust & Privacy</span>
+        <h2 class="mt-4 text-3xl md:text-4xl font-semibold text-ink-900">Your health data stays yours</h2>
+        <p class="mt-4 text-ink-600 max-w-prose">We design with privacy from day one. Omnia follows GDPR principles and strictly limits data access. You control what you share — with options to use Omnia privately or connect with clinicians.</p>
+        <ul class="mt-6 space-y-3">
+          <li class="flex gap-3"><span class="mt-1 inline-block w-5 h-5 rounded-full bg-brand"></span> Encryption in transit & at rest</li>
+          <li class="flex gap-3"><span class="mt-1 inline-block w-5 h-5 rounded-full bg-brand"></span> Granular consent & easy export/delete</li>
+          <li class="flex gap-3"><span class="mt-1 inline-block w-5 h-5 rounded-full bg-brand"></span> Transparent AI usage disclosures</li>
+        </ul>
+      </div>
+      <div class="aspect-[10/7] rounded-2xl border border-ink-100 bg-white shadow-card grid place-items-center">
+        <span class="text-ink-400">Privacy & Security</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="bg-gradient-to-b from-white to-ink-100/40">
+    <div class="mx-auto max-w-screen px-6 py-20">
+      <div class="text-center max-w-2xl mx-auto">
+        <span class="inline-flex px-3 py-1 rounded-full border border-ink-100 text-xs text-ink-500">Pricing</span>
+        <h2 class="mt-4 text-3xl md:text-4xl font-semibold text-ink-900">Start free. Grow with Premium.</h2>
+        <p class="mt-3 text-ink-600">Flexible plans for every stage. Founding members get early perks.</p>
+      </div>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-ink-100 bg-white p-8 shadow-card">
+          <div class="text-sm text-ink-500">Free</div>
+          <div class="mt-1 text-3xl font-semibold">€0<span class="text-base text-ink-400">/mo</span></div>
+          <ul class="mt-4 space-y-2 text-sm text-ink-700">
+            <li class="flex gap-2"><span class="text-brand fg">✓</span> Symptom & mood tracking</li>
+            <li class="flex gap-2"><span class="text-brand fg">✓</span> Core education library</li>
+            <li class="flex gap-2"><span class="text-brand fg">✓</span> Community access</li>
+          </ul>
+          <a href="#join" class="mt-6 inline-flex items-center justify-center w-full h-11 rounded-full border border-ink-200 hover:border-ink-300 transition">Get Started</a>
+        </div>
+
+        <div class="rounded-2xl border border-ink-100 bg-white p-8 shadow-card ring-1 ring-ink-100">
+          <div class="text-sm text-ink-500">Premium</div>
+          <div class="mt-1 text-3xl font-semibold">€9.99<span class="text-base text-ink-400">/mo</span></div>
+          <ul class="mt-4 space-y-2 text-sm text-ink-700">
+            <li class="flex gap-2"><span class="text-brand fg">✓</span> Personalized programs & AI assistant</li>
+            <li class="flex gap-2"><span class="text-brand fg">✓</span> Advanced insights & progress</li>
+            <li class="flex gap-2"><span class="text-brand fg">✓</span> Specialist Q&A (soon)</li>
+          </ul>
+          <a href="#join" class="mt-6 inline-flex items-center justify-center w-full h-11 rounded-full bg-ink-900 text-white hover:shadow-soft transition">Start Premium</a>
+        </div>
+
+        <div class="rounded-2xl border border-ink-100 bg-white p-8 shadow-card">
+          <div class="text-sm text-ink-500">Omnia Plus</div>
+          <div class="mt-1 text-3xl font-semibold">TBA</div>
+          <ul class="mt-4 space-y-2 text-sm text-ink-700">
+            <li class="flex gap-2"><span class="text-brand fg">✓</span> Private consults</li>
+            <li class="flex gap-2"><span class="text-brand fg">✓</span> Wearables integrations</li>
+            <li class="flex gap-2"><span class="text-brand fg">✓</span> Clinician dashboards</li>
+          </ul>
+          <a href="#join" class="mt-6 inline-flex items-center justify-center w-full h-11 rounded-full border border-ink-200 hover:border-ink-300 transition">Join Waitlist</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section id="join" class="mx-auto max-w-screen px-6 py-24">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="inline-flex px-3 py-1 rounded-full border border-ink-100 text-xs text-ink-500">Join the Movement</span>
+        <h2 class="mt-4 text-3xl md:text-4xl font-semibold text-ink-900">Menopause deserves innovation</h2>
+        <p class="mt-4 text-ink-600 max-w-prose">Become a founding member and help shape Omnia. Get early access, influence our roadmap, and receive exclusive perks.</p>
+
+        <form class="mt-6 bg-white border border-ink-100 rounded-2xl p-3 shadow-card" onsubmit="event.preventDefault(); this.reset(); alert('Thanks – you’re on the list!')">
+          <div class="flex gap-2">
+            <input type="email" required placeholder="you@example.com" class="w-full h-12 px-4 rounded-full border border-ink-200 focus:outline-none focus:ring-0 focus:border-ink-400">
+            <button class="h-12 px-6 rounded-full bg-ink-900 text-white hover:shadow-soft transition" type="submit">Join Waitlist</button>
+          </div>
+          <p class="mt-2 text-xs text-ink-500">By signing up, you agree to our Privacy Policy.</p>
+        </form>
+      </div>
+      <div class="aspect-[10/7] rounded-2xl border border-ink-100 bg-white shadow-card grid place-items-center">
+        <span class="text-ink-400">Founding Members</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-ink-100">
+    <div class="mx-auto max-w-screen px-6 h-20 flex items-center justify-between">
+      <div class="text-sm text-ink-500">© <span id="y"></span> Omnia. All rights reserved.</div>
+      <nav class="flex items-center gap-5 text-sm text-ink-600">
+        <a class="hover:opacity-80" href="#">Terms</a>
+        <a class="hover:opacity-80" href="#">Privacy</a>
+        <a class="hover:opacity-80" href="#">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const btn = document.getElementById('mobileBtn');
+    const nav = document.getElementById('mobileNav');
+    btn?.addEventListener('click', () => nav.classList.toggle('hidden'));
+  </script>
+</body>
+</html>

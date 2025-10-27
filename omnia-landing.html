@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Omnia – Women’s Health Platform</title>
+  <meta name="description" content="Omnia helps women navigate menopause with AI-powered insights, symptom tracking, and expert-backed education — all in one place." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="bloom-theme.css">
+  <style>
+    /* Minor page-scoped helpers */
+    .hero-visual {
+      aspect-ratio: 16 / 10;
+      background: linear-gradient(180deg, rgba(111,124,255,.08), rgba(154,230,180,.10));
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      font-weight: 600;
+      letter-spacing: .04em;
+    }
+    .kpi {
+      display: grid; gap: 6px;
+      padding: 16px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+    }
+    .kpi .num { font-weight: 700; font-size: var(--fs-xl); }
+    .list-check { list-style: none; padding: 0; margin: 0; }
+    .list-check li { padding-left: 28px; position: relative; margin: 8px 0; }
+    .list-check li::before {
+      content: "✓";
+      position: absolute; left: 0; top: 0; transform: translateY(1px);
+      font-weight: 700; color: var(--primary);
+    }
+    .muted { color: var(--muted); }
+    .logo {
+      display: inline-flex; align-items: center; gap: 10px; font-weight: 800;
+      letter-spacing: .04em; text-transform: uppercase;
+    }
+    .logo .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--primary); display: inline-block; }
+    .pill { display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border:1px solid var(--border); border-radius:999px; background: var(--bg-soft); font-size: var(--fs-xs); }
+    .subtle { color: var(--text-dim); }
+    .footer a:hover { text-decoration: underline; }
+    .nowrap { white-space: nowrap; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav">
+      <a href="#top" class="logo" aria-label="Omnia home">
+        <span class="dot" aria-hidden="true"></span>
+        OMNIA
+      </a>
+      <nav class="links" aria-label="Primary">
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#join" class="btn btn-primary" style="height:36px;padding:0 16px;">Join Waitlist</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" class="hero">
+    <div class="container grid grid-2">
+      <div class="stack">
+        <span class="eyebrow fade-up">Women’s Health • Menopause</span>
+        <h1 class="h1 spaced fade-up delay-1">
+          Take control of your <span class="alt">menopause</span> journey.
+        </h1>
+        <p class="lead max-w-prose fade-up delay-2">
+          Omnia helps women navigate menopause with AI‑powered insights, symptom tracking,
+          and expert‑backed education — all in one place.
+        </p>
+        <div class="stack" style="margin-top: var(--space-6)">
+          <div class="grid" style="grid-template-columns: auto auto; gap: 14px;">
+            <a href="#join" class="btn btn-primary">Join the Waitlist</a>
+            <a href="#how" class="btn btn-ghost">See How It Works</a>
+          </div>
+          <div class="grid" style="grid-template-columns: repeat(3, minmax(0,1fr)); max-width: 560px;">
+            <div class="kpi"><div class="num">900M</div><div class="muted">Women lack <span class="nowrap">personalized care</span></div></div>
+            <div class="kpi"><div class="num">80%</div><div class="muted">Say menopause affects daily life</div></div>
+            <div class="kpi"><div class="num">1/3</div><div class="muted">Experience depression symptoms</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="media hero-visual fade-up">
+        App preview / dashboard mock (placeholder)
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section class="section">
+    <div class="container grid grid-2">
+      <div class="stack">
+        <span class="badge">The Gap Today</span>
+        <h2 class="h1" style="font-size: var(--fs-2xl);">Menopause care is fragmented and impersonal</h2>
+        <p class="max-w-prose">Healthcare often labels menopause as “normal aging,” leaving women without the guidance, empathy, or tools they need to feel well and make confident decisions.</p>
+        <ul class="list-check max-w-prose">
+          <li>Fragmented information across apps and articles</li>
+          <li>Limited access to specialists and supportive care</li>
+          <li>One‑size‑fits‑all advice that ignores unique journeys</li>
+        </ul>
+      </div>
+      <div class="media">
+        <img src="https://dummyimage.com/1200x800/f7f8fb/e5e7eb&text=Fragmented+Care" alt="Illustration of fragmented menopause care" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution / Core Pillars -->
+  <section id="features" class="section">
+    <div class="container">
+      <div class="center stack" style="margin-bottom: var(--space-10)">
+        <span class="badge">The Omnia Solution</span>
+        <h2 class="h1" style="font-size: var(--fs-2xl);">Personalized. Holistic. Backed by Experts.</h2>
+        <p class="max-w-prose">Omnia combines tracking, education, and care into one platform — tailored to your symptoms, lifestyle, and goals.</p>
+      </div>
+
+      <div class="grid" style="grid-template-columns: 1fr; gap: 40px;">
+        <div class="feature">
+          <div>
+            <div class="title">Personalized Guidance</div>
+            <p class="desc">AI‑driven recommendations adapt to your unique hormonal transition — built from your symptom patterns, medical history, and preferences.</p>
+            <ul class="list-check">
+              <li>Daily insights & nudges</li>
+              <li>Custom non‑hormonal & hormonal options</li>
+              <li>Clear, simple explanations</li>
+            </ul>
+          </div>
+          <div class="media"><img src="https://dummyimage.com/1200x800/ffffff/e5e7eb&text=Personalized+Insights" alt="Personalized insights mock" loading="lazy"></div>
+        </div>
+
+        <div class="feature">
+          <div>
+            <div class="title">Expert‑Backed Education</div>
+            <p class="desc">Evidence‑based content curated with clinicians — so you can understand what’s happening and choose what works for you.</p>
+            <ul class="list-check">
+              <li>Plain‑language learning paths</li>
+              <li>Programs for sleep, mood, hot flashes, and more</li>
+              <li>Weekly Q&A with specialists (coming soon)</li>
+            </ul>
+          </div>
+          <div class="media"><img src="https://dummyimage.com/1200x800/ffffff/e5e7eb&text=Expert+Education" alt="Expert education mock" loading="lazy"></div>
+        </div>
+
+        <div class="feature">
+          <div>
+            <div class="title">Community & Care</div>
+            <p class="desc">You’re not alone. Join a supportive community and connect with vetted experts who understand every stage of menopause.</p>
+            <ul class="list-check">
+              <li>Peer support & moderated groups</li>
+              <li>Guided programs and check‑ins</li>
+              <li>Private consults (Omnia Plus)</li>
+            </ul>
+          </div>
+          <div class="media"><img src="https://dummyimage.com/1200x800/ffffff/e5e7eb&text=Community+%26+Care" alt="Community and care mock" loading="lazy"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it Works -->
+  <section id="how" class="section">
+    <div class="container grid grid-2">
+      <div class="stack">
+        <span class="badge">How it works</span>
+        <h2 class="h1" style="font-size: var(--fs-2xl);">From tracking to thriving</h2>
+        <ol class="max-w-prose" style="padding-left: 18px;">
+          <li><strong>Tell us how you feel.</strong> Log symptoms, sleep, mood, and habits.</li>
+          <li><strong>Get your plan.</strong> Personalized insights and recommendations.</li>
+          <li><strong>Feel better.</strong> Track progress with supportive nudges and programs.</li>
+        </ol>
+        <div class="pill">Built for iOS‑style clarity • Privacy‑first • GDPR‑ready</div>
+      </div>
+      <div class="media">
+        <img src="https://dummyimage.com/1200x800/f7f8fb/e5e7eb&text=Track+%E2%86%92+Discover+%E2%86%92+Thrive" alt="Three steps visualization" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Personas -->
+  <section class="section">
+    <div class="container">
+      <div class="center stack" style="margin-bottom: var(--space-8)">
+        <span class="badge">Designed for every stage</span>
+        <h2 class="h1" style="font-size: var(--fs-2xl);">Early symptoms to post‑menopause</h2>
+      </div>
+      <div class="grid" style="grid-template-columns: repeat(3, minmax(0,1fr));">
+        <div class="card">
+          <h3 class="subtle" style="margin:0 0 8px 0;">Lindsay, 35</h3>
+          <p>High stress & early signs. Wants a holistic, non‑hormonal approach.</p>
+        </div>
+        <div class="card">
+          <h3 class="subtle" style="margin:0 0 8px 0;">Lucy, 47</h3>
+          <p>Mid‑life shifts affect work & relationships. Seeks structure and support.</p>
+        </div>
+        <div class="card">
+          <h3 class="subtle" style="margin:0 0 8px 0;">Sarah, 51</h3>
+          <p>Severe symptoms and care friction. Needs clinical clarity and advocacy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust & Privacy -->
+  <section id="privacy" class="section">
+    <div class="container grid grid-2">
+      <div class="stack">
+        <span class="badge">Trust & Privacy</span>
+        <h2 class="h1" style="font-size: var(--fs-2xl);">Your health data stays yours</h2>
+        <p class="max-w-prose">We design with privacy from day one. Omnia follows GDPR principles and strictly limits data access. You control what you share — with options to use Omnia privately or connect with clinicians.</p>
+        <ul class="list-check">
+          <li>Encryption in transit & at rest</li>
+          <li>Granular consent & easy export/delete</li>
+          <li>Transparent AI usage disclosures</li>
+        </ul>
+      </div>
+      <div class="media">
+        <img src="https://dummyimage.com/1200x800/ffffff/e5e7eb&text=Privacy+%26+Security" alt="Privacy and security illustration" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" aria-label="Testimonials">
+    <div class="container">
+      <div class="center stack" style="margin-bottom: var(--space-8)">
+        <span class="badge">What women say</span>
+        <h2 class="h1" style="font-size: var(--fs-2xl);">Real relief. Real understanding.</h2>
+      </div>
+      <div class="testimonials">
+        <div class="quote">
+          “Omnia gave me language for what I was feeling — and a plan I could follow.”
+          <div class="author"><span class="pill">Beta User</span> 48</div>
+        </div>
+        <div class="quote">
+          “I finally stopped guessing. The daily nudges were small, but they added up.”
+          <div class="author"><span class="pill">Community Member</span> 44</div>
+        </div>
+        <div class="quote">
+          “The education is clear and respectful. I felt seen.”
+          <div class="author"><span class="pill">Pilot Cohort</span> 51</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="section">
+    <div class="container">
+      <div class="center stack" style="margin-bottom: var(--space-8)">
+        <span class="badge">Pricing</span>
+        <h2 class="h1" style="font-size: var(--fs-2xl);">Start free. Grow with Premium.</h2>
+        <p class="max-w-prose">Flexible plans for every stage. Founding members get early perks.</p>
+      </div>
+      <div class="pricing">
+        <div class="plan">
+          <h3>Free</h3>
+          <div class="price">€0<span class="muted">/mo</span></div>
+          <ul class="list-check features">
+            <li>Symptom & mood tracking</li>
+            <li>Core education library</li>
+            <li>Community access</li>
+          </ul>
+          <div class="cta"><a href="#join" class="btn btn-ghost">Get Started</a></div>
+        </div>
+        <div class="plan">
+          <h3>Premium</h3>
+          <div class="price">€9.99<span class="muted">/mo</span></div>
+          <ul class="list-check features">
+            <li>Personalized programs & AI assistant</li>
+            <li>Advanced insights & progress</li>
+            <li>Specialist Q&A (soon)</li>
+          </ul>
+          <div class="cta"><a href="#join" class="btn btn-primary">Start Premium</a></div>
+        </div>
+        <div class="plan">
+          <h3>Omnia Plus</h3>
+          <div class="price">TBA</div>
+          <ul class="list-check features">
+            <li>Private consults</li>
+            <li>Wearables integrations</li>
+            <li>Clinician dashboards</li>
+          </ul>
+          <div class="cta"><a href="#join" class="btn btn-ghost">Join Waitlist</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section id="join" class="section">
+    <div class="container grid grid-2">
+      <div class="stack">
+        <span class="badge">Join the Movement</span>
+        <h2 class="h1" style="font-size: var(--fs-2xl);">Menopause deserves innovation</h2>
+        <p class="max-w-prose">Become a founding member and help shape Omnia. Get early access, influence our roadmap, and receive exclusive perks.</p>
+
+        <form class="card" onsubmit="event.preventDefault(); this.reset(); alert('Thanks – you’re on the list!')">
+          <label for="email" class="eyebrow">Email</label>
+          <input id="email" required type="email" placeholder="you@example.com" style="
+            margin-top:8px; width:100%; height:48px; padding:0 14px;
+            border:1px solid var(--border); border-radius: 999px; font-size: var(--fs-sm);
+            outline: none; background: var(--bg-soft);
+          " />
+          <div style="display:flex; gap:10px; margin-top: 12px">
+            <button class="btn btn-primary" type="submit">Join the Waitlist</button>
+            <a class="btn btn-ghost" href="#how">Learn More</a>
+          </div>
+          <p class="muted" style="margin:10px 0 0 0; font-size: var(--fs-xs)">By signing up, you agree to our Privacy Policy.</p>
+        </form>
+      </div>
+      <div class="media">
+        <img src="https://dummyimage.com/1200x800/ffffff/e5e7eb&text=Founding+Members" alt="Founding members illustration" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container grid" style="grid-template-columns: 1fr auto;">
+      <div>© <span id="y"></span> Omnia. All rights reserved.</div>
+      <div class="muted">
+        <a href="#" aria-label="Terms">Terms</a> ·
+        <a href="#" aria-label="Privacy">Privacy</a> ·
+        <a href="#" aria-label="Contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // IntersectionObserver to add fade-up class when in view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-up');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
